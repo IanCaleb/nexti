@@ -17,8 +17,8 @@ public class Player : MonoBehaviour
 
     [SerializeField] private bool attackingBool;
 
+    [SerializeField] private int vida_atual;
    
-
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
