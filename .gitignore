@@ -1,0 +1,44 @@
+# Unity generated files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Asset meta data should only be ignored when the corresponding asset is also ignored
+# *.meta
+
+# Uncomment this line if you wish to ignore the asset store tools plugin
+# [Aa]ssets/AssetStoreTools*
+
+# Auto-generated JetBrains Rider plugin
+[Aa]ssets/Plugins/Editor/JetBrains*
+
+# Visual Studio
+.vscode/
+*.csproj
+*.sln
+*.user
+*.unityproj
+*.pidb
+*.suo
+*.tmp
+*.userprefs
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+*.pyc
+*.idea/
+
+# Unity3D generated file on crash reports
+sysinfo.txt
+
+# Builds
+[Bb]uilds/
+
+# Gradle files
+.gradle/
