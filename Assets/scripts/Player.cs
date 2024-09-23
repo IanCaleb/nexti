@@ -18,6 +18,12 @@ public class Player : MonoBehaviour
     [SerializeField] private bool attackingBool;
 
     [SerializeField] private int vida_atual;
+
+    public Transform ataquePoint;
+
+    public float ataqueRanger;
+
+    public LayerMask playerLayers;
    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -207,6 +213,11 @@ public class Player : MonoBehaviour
         {
             attackingBool = true;
             anim.SetBool("ataque", true); 
+
+            if(attackingBool)
+            {
+                
+            }
             
             
         }
@@ -218,6 +229,35 @@ public class Player : MonoBehaviour
     {
         anim.SetBool("ataque", false);
         attackingBool = false;
+    }
+
+    /*
+    ⠀⠀⠀⠀⣠⣶⣶⣤⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⣠⣶⣶⣦⠀⠀
+    ⠀⠀⠀⠀⢿⣿⣿⣿⠀⠀⠀⢀⣀⣠⣤⣄⠀⢿⣿⣿⣿⠇⠀
+    ⠀⠀⠀⠀⠈⣉⣩⣥⣶⣶⣿⣿⣿⡿⠿⠋⣀⣀⣉⣉⡁⠀⠀
+    ⠀⠀⣠⣾⣿⣿⣿⣿⡟⠛⠋⠉⠀⣠⣴⣿⣿⣿⣿⣿⣿⣧⠀
+    ⣴⣾⣿⣿⣿⣿⣿⣿⢁⣤⣶⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀
+    ⠻⠿⣿⣿⣿⣿⣿⠇⠈⠻⠟⠋⠉⠁⢰⣿⣿⣿⣿⣿⣿⡿⠂
+    ⠀⢠⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⢠⣿⣿⣿⣿⡏⠀⠀⠀⠀
+    ⠀⣸⣿⣿⠟⣿⣿⣧⠀⠀⠀⠀⣰⣿⣿⡿⣿⣿⣷⠀⠀⠀⠀
+    ⠀⣿⣿⡟⠀⠘⣿⣿⡇⠀⠀⢰⣿⣿⠟⠀⠸⣿⣿⡄⠀⠀⠀
+    ⣰⣿⣿⠃⠀⠀⣿⣿⡇⠀⠀⢸⣿⣿⠀⠀⠀⢿⣿⣧⠀⠀⠀
+    ⣿⣿⠇⠀⠀⠀⣿⣿⡇⠀⠀⢸⣿⣿⠀⠀⠀⠘⣿⣿⡆⠀⠀
+    ⠉⠉⠀⠀⠀⠀⠈⠉⠀⠀⠀⠀⠉⠉⠀⠀⠀⠀⠈⠉⠀⠀
+    */
+
+    public void Levando_dano()
+    {
+        vida_atual -= 10;
+    }
+
+    void Morrendo()
+    {
+        if(vida_atual <=0)
+        {
+            Debug.Log("morreukk");
+            //anim.SetBool("ataque", false);
+        }
     }
     
 }
